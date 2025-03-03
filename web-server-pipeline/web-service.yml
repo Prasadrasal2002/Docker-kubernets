@@ -1,0 +1,16 @@
+#akms sp3t
+kind: service
+apiVersion: v1
+metadata:
+  name: web-service
+  namespace: web
+spec:
+  selector:
+    app: web-server
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: NodePort
+    
+    
