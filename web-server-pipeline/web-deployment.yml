@@ -1,0 +1,24 @@
+#akms rs tsc cip
+kind: deployment
+apiVersion: apps/v1
+metadata:
+  name: my-web-server-deployment
+  namespace: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-server
+  template:
+    metadata:
+      labels:
+       app: web-server
+    spec:
+      containers:
+      - name: web-server-container
+        image: enter-image-id
+        ports:
+        - containerPort: 80
+      
+     
+  
