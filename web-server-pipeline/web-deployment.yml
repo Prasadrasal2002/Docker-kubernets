@@ -1,6 +1,5 @@
-#akms rs tsc cip
-kind: deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: my-web-server-deployment
   namespace: web
@@ -12,13 +11,10 @@ spec:
   template:
     metadata:
       labels:
-       app: web-server
+        app: web-server
     spec:
       containers:
-      - name: web-server-container
-        image: enter-image-id
-        ports:
-        - containerPort: 80
-      
-     
-  
+        - name: web-server-container
+          image: devopscode44/nginx-assignment1-docker-k8s:v1
+          ports:
+            - containerPort: 80

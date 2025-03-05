@@ -1,5 +1,5 @@
 #akms sp3t
-kind: service
+kind: Service
 apiVersion: v1
 metadata:
   name: web-service
